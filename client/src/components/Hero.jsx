@@ -11,7 +11,7 @@ const Hero = ({setShowForm}) => {
         <h4 className='text-md font-semibold'>A NEW WORLD OF ISLAND INSPIRED LIVING</h4>
         <div className='flex flex-row items-center justify-center gap-6 mt-4'>
           <button onClick={()=> setShowForm(true)} className='py-2 px-6 bg-purple-100 border text-black rounded-full cursor-pointer text-transform uppercase font-semibold text-[12px]'>join the waitlist</button>
-          <button className='py-2 px-6 bg-secondary  text-primary rounded-full cursor-pointer text-transform uppercase font-semibold text-[12px]'>download brochure</button>
+          <button onClick={()=> setShowForm(true)} className='py-2 px-6 bg-secondary  text-primary rounded-full cursor-pointer text-transform uppercase font-semibold text-[12px]'>download brochure</button>
         </div></div>
       </div>
     </div>

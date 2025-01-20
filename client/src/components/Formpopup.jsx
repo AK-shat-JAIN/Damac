@@ -1,34 +1,33 @@
 import React from 'react'
-import { useState } from 'react'
+
 
 const Formpopup = ({setShowForm}) => {
   return (
     <div className="bg-white p-6 rounded-lg shadow-lg md:w-1/2 animate-fade-in">
-          <h2 className="text-2xl font-semibold text-gray-800">
-            Fill the form & Get VIP Access to latest market updates
-          </h2>
           <form className="mt-6 space-y-4">
             {/* First Name */}
             <div>
               <label
-                htmlFor="firstName"
-                className="block text-gray-600 font-medium mb-1"
+              
+                htmlFor="fullName"
+                className="block text-gray-600 font-medium text-xs mb-1"
               >
-                First Name
+                Full Name
               </label>
               <input
+              // required
                 type="text"
-                id="firstName"
-                placeholder="Your First Name"
+                id="fullName"
+                placeholder="Your Full Name"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
             </div>
 
-            {/* Last Name */}
+            {/* Last Name
             <div>
               <label
                 htmlFor="lastName"
-                className="block text-gray-600 font-medium mb-1"
+                className="block text-gray-600 font-medium text-xs mb-1"
               >
                 Last Name
               </label>
@@ -38,17 +37,19 @@ const Formpopup = ({setShowForm}) => {
                 placeholder="Your Last Name"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
-            </div>
+            </div> */}
 
             {/* Email */}
             <div>
               <label
+                
                 htmlFor="email"
-                className="block text-gray-600 font-medium mb-1"
+                className="block text-gray-600 font-medium text-xs mb-1"
               >
                 Email
               </label>
               <input
+              // required
                 type="email"
                 id="email"
                 placeholder="Your Email Address"
@@ -60,21 +61,22 @@ const Formpopup = ({setShowForm}) => {
             <div>
               <label
                 htmlFor="contact"
-                className="block text-gray-600 font-medium mb-1"
+                className="block text-gray-600 text-xs font-medium mb-1"
               >
                 Contact Number
               </label>
               <div className="flex items-center gap-2">
-                <select
+                <select 
                   id="countryCode"
-                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="px-4 py-3 border read-only border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                 >
-                  <option value="+1">+1</option>
+                  {/* <option value="+1">+1</option> */}
                   <option value="+91">+91</option>
-                  <option value="+44">+44</option>
+                  {/* <option value="+44">+44</option> */}
                   {/* Add more country codes as needed */}
                 </select>
                 <input
+                // required
                   type="tel"
                   id="contact"
                   placeholder="Phone Number"
@@ -83,11 +85,11 @@ const Formpopup = ({setShowForm}) => {
               </div>
             </div>
 
-            {/* Location */}
+            {/* Location
             <div>
               <label
                 htmlFor="location"
-                className="block text-gray-600 font-medium mb-1"
+                className="block text-gray-600 text-xs font-medium mb-1"
               >
                 Location
               </label>
@@ -97,11 +99,12 @@ const Formpopup = ({setShowForm}) => {
                 placeholder="Enter your location"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
-            </div>
+            </div> */}
 
             {/* Checkbox */}
             <div className="flex items-center">
               <input
+              // required
                 type="checkbox"
                 id="financingInfo"
                 className="h-4 w-4 text-blue-500 border-gray-300 rounded focus:ring-2 focus:ring-blue-400"
@@ -116,7 +119,6 @@ const Formpopup = ({setShowForm}) => {
 
             {/* Submit Button */}
             <button
-            onClick={()=> setShowForm(false)}
               type="submit"
               className="w-full py-3 text-white bg-blue-500 rounded-lg shadow-lg hover:bg-blue-600 transition-transform transform hover:scale-105"
             >
