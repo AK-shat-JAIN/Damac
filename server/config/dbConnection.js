@@ -8,7 +8,7 @@ const connectionToDB = async () => {
             process.env.MONGO_URI || 'mongodb://localhost:27017/LMS'
         )
         if(connection){
-            console.log(`Connected to MongoDB: ${connection.host}`)
+            console.log(`Connected to MongoDB: ${connection.host} ${connection.name}`)
         }
     }
     catch(error){

@@ -37,5 +37,5 @@ const leadSchema = new Schema({
 })
 
 
-const lead = model('Lead', userSchema)
+const Lead = model('Lead', leadSchema)
 export default Lead
