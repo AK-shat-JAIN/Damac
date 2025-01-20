@@ -17,10 +17,9 @@ const Formpopup = ({onClose}) => {
             <div className="title flex flex-col justify-between ">
               <h2 className='text-2xl font-semibold text-gray-800 text-center' >
                 {/* {currState} */}
-                Get Ahead on the Waitlist
-            </h2>
-            <p>Book a call with our directors to have a full understanding and make an informed decision
-            </p>
+                Fill the form & Get VIP Access to latest market updates
+                </h2>
+            {/* o */}
             
 
             </div>
