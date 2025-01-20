@@ -13,7 +13,7 @@ const House = () => {
       </div>
 
       {/* Text Content */}
-      <div className="relative z-1 flex flex-col items-center h-screen  p-4 md:px-10">
+      <div className="relative z-1 flex flex-col items-center h-[40vh] md:h-[60vh] lg:h-screen  p-4 md:px-10">
         <h1 className="text-2xl md:text-5xl lg:text-7xl font-bold text-gray-900 leading-tight text-center">
           Crafting Elegance in
         </h1>
