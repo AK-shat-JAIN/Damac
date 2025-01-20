@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import leadSliceReducer from "./Slices/leadSlice";
+import leadSliceReducer from "./Slices/LeadSlice";
 
 const store = configureStore({
     reducer: {
