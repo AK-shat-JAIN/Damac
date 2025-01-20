@@ -33,20 +33,22 @@ const Form = () => {
             {/* First Name */}
             <div>
               <label
-                htmlFor="firstName"
+              
+                htmlFor="fullName"
                 className="block text-gray-600 font-medium text-xs mb-1"
               >
-                First Name
+                Full Name
               </label>
               <input
+              required
                 type="text"
-                id="firstName"
-                placeholder="Your First Name"
+                id="fullName"
+                placeholder="Your Full Name"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
             </div>
 
-            {/* Last Name */}
+            {/* Last Name
             <div>
               <label
                 htmlFor="lastName"
@@ -60,17 +62,19 @@ const Form = () => {
                 placeholder="Your Last Name"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
-            </div>
+            </div> */}
 
             {/* Email */}
             <div>
               <label
+                
                 htmlFor="email"
                 className="block text-gray-600 font-medium text-xs mb-1"
               >
                 Email
               </label>
               <input
+              required
                 type="email"
                 id="email"
                 placeholder="Your Email Address"
@@ -87,16 +91,17 @@ const Form = () => {
                 Contact Number
               </label>
               <div className="flex items-center gap-2">
-                <select
+                <select 
                   id="countryCode"
-                  className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="px-4 py-3 border read-only border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                 >
-                  <option value="+1">+1</option>
+                  {/* <option value="+1">+1</option> */}
                   <option value="+91">+91</option>
-                  <option value="+44">+44</option>
+                  {/* <option value="+44">+44</option> */}
                   {/* Add more country codes as needed */}
                 </select>
                 <input
+                required
                   type="tel"
                   id="contact"
                   placeholder="Phone Number"
@@ -105,7 +110,7 @@ const Form = () => {
               </div>
             </div>
 
-            {/* Location */}
+            {/* Location
             <div>
               <label
                 htmlFor="location"
@@ -119,11 +124,12 @@ const Form = () => {
                 placeholder="Enter your location"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
-            </div>
+            </div> */}
 
             {/* Checkbox */}
             <div className="flex items-center">
               <input
+              required
                 type="checkbox"
                 id="financingInfo"
                 className="h-4 w-4 text-blue-500 border-gray-300 rounded focus:ring-2 focus:ring-blue-400"

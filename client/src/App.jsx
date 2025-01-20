@@ -5,7 +5,8 @@ import About from './components/About'
 import House from './components/House'
 import Enquire from './components/Enquire'
 import Form from './components/Form'
-import Carousel from './components/Carousel'
+// import Carousel from './components/Carousel'
+import Grid from './components/Grid'
 import Clients from './components/Clients'
 import DreamHome from './components/DreamHome'
 import DreamHome2 from './components/DreamHome2'
@@ -26,7 +27,8 @@ function App() {
       <Enquire setShowForm={setShowForm}></Enquire>
       <Clients></Clients>
       <DreamHome></DreamHome>
-      <Carousel></Carousel>
+      {/* <Carousel></Carousel> */}
+      <Grid></Grid>
       <DreamHome2></DreamHome2>
       <Form></Form>
       <Footer></Footer>
