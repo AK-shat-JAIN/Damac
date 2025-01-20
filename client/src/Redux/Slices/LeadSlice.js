@@ -27,7 +27,7 @@ const LeadSlice = createSlice({
     name: 'lead',
     initialState,
     reducers: {},
-    extraReducers: (builder) => {               OR
+    extraReducers: (builder) => {
         builder
         .addCase(leadGenerate.fulfilled, (state, action) => {
             localStorage.setItem('data', JSON.stringify(action.payload.data));
