@@ -1,10 +1,29 @@
+import { useEffect } from "react"
 import React from 'react'
 
 
-const Formpopup = ({setShowForm}) => {
+const Formpopup = ({onClose}) => {
+  // const [currState,setcurrState]=useState("Get Ahead on the Waitlist")
+  
+
   return (
-    <div className="bg-white p-6 rounded-lg shadow-lg md:w-1/2 animate-fade-in">
-          <form className="mt-6 space-y-4">
+    <div className="bg-black bg-opacity-60 scroll-none p-6 shadow-lg z-50  animate-fade-in fixed scroll-none  grid h-[100%] w-[100%] place-items-center">
+          <form className="bg-white  p-10 rounded-lg space-y-4 w-max[28vw, 400px] z-50 relative border-solid border-2 border-gray-200">
+            <div className="flex justify-between items-center">
+              <h2></h2>
+              <img onClick={onClose} src="/Images/close.png" alt="close" className='mt-2 w-4 h-4 cursor-pointer rounded-full'/>
+            </div>
+
+            <div className="title flex flex-col justify-between ">
+              <h2 className='text-2xl font-semibold text-gray-800 text-center' >
+                {/* {currState} */}
+                Get Ahead on the Waitlist
+            </h2>
+            <p>Book a call with our directors to have a full understanding and make an informed decision
+            </p>
+            
+
+            </div>
             {/* First Name */}
             <div>
               <label
@@ -119,6 +138,7 @@ const Formpopup = ({setShowForm}) => {
 
             {/* Submit Button */}
             <button
+            // onClick={()=> setShowForm(false)}
               type="submit"
               className="w-full py-3 text-white bg-blue-500 rounded-lg shadow-lg hover:bg-blue-600 transition-transform transform hover:scale-105"
             >

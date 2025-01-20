@@ -17,17 +17,21 @@ function App() {
 
   const [showForm, setShowForm] = useState(false)
 
+  const toggleForm = () => {
+    setShowForm(!showForm)
+  }
+
   return (
     <>
     
     
    <main className='bg-white'>
-   {showForm?<Formpopup></Formpopup>:<></>}
+   {showForm?<Formpopup onClose={toggleForm}></Formpopup>:<></>}
 
-      <Hero setShowForm={setShowForm}></Hero>
-      <About setShowForm={setShowForm}></About>
+      <Hero formVis={toggleForm}></Hero>
+      <About formVis={toggleForm}></About>
       <House></House>
-      <Enquire setShowForm={setShowForm}></Enquire>
+      <Enquire formVis={toggleForm}></Enquire>
       <Clients></Clients>
       <DreamHome></DreamHome>
       {/* <Carousel></Carousel> */}

@@ -1,24 +1,24 @@
 import React from 'react'
 
-const Enquire = ({setShowForm}) => {
+const Enquire = ({formVis}) => {
   return (
     <div className="bg-gray-100 py-10 px-5 md:px-20">
       <div className="grid md:grid-cols-2 gap-8 items-center">
         
         <div className="relative">
         
-          <div className="relative flex">
+          <div className="relative flex ">
             
             <img
               src="/Images/house1.jpg" 
               alt="Modern House Wide"
-              className="rounded-lg shadow-lg w-[60%] h-auto mr-2 relative z-10 transform translate-y-4 hover:scale-105 transition-transform duration-500"
+              className="rounded-lg shadow-lg w-[60%] h-auto mr-2 relative z-[2] transform translate-y-4 hover:scale-105 transition-transform duration-500"
             />
             
             <img
               src="/Images/house2.jpg" 
               alt="Modern House Narrow"
-              className="rounded-lg shadow-lg w-[40%] h-auto relative z-10 transform hover:scale-105 transition-transform duration-500"
+              className="rounded-lg shadow-lg w-[40%] h-auto relative z-[2] transform hover:scale-105 transition-transform duration-500"
             />
           </div>
         </div>
@@ -34,7 +34,7 @@ const Enquire = ({setShowForm}) => {
             the unique charm of locations such as the Maldives, Bora Bora,
             Seychelles, Hawaii, Bali, and Fiji. Nestled in the heart of Dubai.
           </p>
-          <button onClick={()=> setShowForm(true)} className="mt-4 py-2 px-9 bg-secondary  text-white rounded-full cursor-pointer text-transform uppercase font-semibold text-[8px] hover:bg-blue-600 transition-transform transform hover:scale-105">
+          <button onClick={()=> formVis()} className="mt-4 py-2 px-9 bg-secondary  text-white rounded-full cursor-pointer text-transform uppercase font-semibold text-[8px] hover:bg-blue-600 transition-transform transform hover:scale-105">
             Enquire Now
           </button>
         </div>
