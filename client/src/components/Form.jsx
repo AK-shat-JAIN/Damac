@@ -1,6 +1,53 @@
 import React from 'react'
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import toast from 'react-hot-toast'
+
+import { leadGenerate } from '../Redux/Slices/LeadSlice'
 
 const Form = () => {
+
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+  })
+
+  function handleChange(e){
+    const { name, value } = e.target
+    setFormData({ 
+      ...formData,
+      [name]: value
+    })
+    console.log(formData)
+  }
+
+  async function FormSubmission(e) {
+    e.preventDefault()
+    
+    if(!formData.fullName || !formData.email || !formData.phone){
+      toast.error('Please fill all the fields')
+      return;
+    }
+
+    const response = await dispatch(leadGenerate(formData))
+    if(response?.payload?.success){
+      toast.success('Form Submitted Successfully')
+      navigate('/')
+    }
+
+    setFormData({
+      fullName: '',
+      email: '',
+      phone: '',
+    })
+  }
+
+
   return (
     <div className="bg-gray-50 py-10 px-5 md:px-20">
       <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
@@ -29,7 +76,7 @@ const Form = () => {
           <h2 className="text-2xl font-semibold text-gray-800">
             Fill the form & Get VIP Access to latest market updates
           </h2>
-          <form className="mt-6 space-y-4">
+          <form onSubmit={FormSubmission} className="mt-6 space-y-4">
             {/* First Name */}
             <div>
               <label
@@ -43,8 +90,11 @@ const Form = () => {
               required
                 type="text"
                 id="fullName"
+                name="fullName"
                 placeholder="Your Full Name"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                onChange={handleChange}
+                // value={formData.fullName}
               />
             </div>
 
@@ -77,7 +127,10 @@ const Form = () => {
               required
                 type="email"
                 id="email"
+                name="email"
                 placeholder="Your Email Address"
+                onChange={handleChange}
+                // value={formData.email}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
             </div>
@@ -104,7 +157,10 @@ const Form = () => {
                 required
                   type="tel"
                   id="contact"
+                  name="phone"
                   placeholder="Phone Number"
+                  onChange={handleChange}
+                  // value={formData.phone}
                   className="flex-grow px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
               </div>
