@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Enquire = () => {
+const Enquire = ({setShowForm}) => {
   return (
     <div className="bg-gray-100 py-10 px-5 md:px-20">
       <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -34,7 +34,7 @@ const Enquire = () => {
             the unique charm of locations such as the Maldives, Bora Bora,
             Seychelles, Hawaii, Bali, and Fiji. Nestled in the heart of Dubai.
           </p>
-          <button className="mt-4 py-2 px-9 bg-secondary  text-white rounded-full cursor-pointer text-transform uppercase font-semibold text-[8px] hover:bg-blue-600 transition-transform transform hover:scale-105">
+          <button onClick={()=> setShowForm(true)} className="mt-4 py-2 px-9 bg-secondary  text-white rounded-full cursor-pointer text-transform uppercase font-semibold text-[8px] hover:bg-blue-600 transition-transform transform hover:scale-105">
             Enquire Now
           </button>
         </div>

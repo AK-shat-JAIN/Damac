@@ -19,8 +19,11 @@ function App() {
 
   return (
     <>
-    {showForm?<Formpopup></Formpopup>:<></>}
+    
+    
    <main className='bg-white'>
+   {showForm?<Formpopup></Formpopup>:<></>}
+
       <Hero setShowForm={setShowForm}></Hero>
       <About setShowForm={setShowForm}></About>
       <House></House>
