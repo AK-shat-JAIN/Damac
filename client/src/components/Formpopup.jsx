@@ -1,14 +1,56 @@
-import { useEffect } from "react"
+// import { useEffect } from "react"
 import React from 'react'
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import toast from 'react-hot-toast'
 
+import { leadGenerate } from '../Redux/Slices/LeadSlice'
 
 const Formpopup = ({onClose}) => {
   // const [currState,setcurrState]=useState("Get Ahead on the Waitlist")
-  
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+  })
+
+  function handleChange(e){
+    const { name, value } = e.target
+    setFormData({ 
+      ...formData,
+      [name]: value
+    })
+    console.log(formData)
+  }
+
+  async function FormSubmission(e) {
+    e.preventDefault()
+    
+    if(!formData.fullName || !formData.email || !formData.phone){
+      toast.error('Please fill all the fields')
+      return;
+    }
+
+    const response = await dispatch(leadGenerate(formData))
+    if(response?.payload?.success){
+      toast.success('Form Submitted Successfully')
+      navigate('/')
+    }
+
+    setFormData({
+      fullName: '',
+      email: '',
+      phone: '',
+    })
+  }
 
   return (
     <div className="bg-black bg-opacity-60 scroll-none p-6 shadow-lg z-50  animate-fade-in fixed scroll-none  grid h-[100%] w-[100%] place-items-center">
-          <form className="bg-white  p-10 rounded-lg space-y-4 w-max[28vw, 400px] z-50 relative border-solid border-2 border-gray-200">
+          <form onSubmit={FormSubmission} className="bg-white  p-10 rounded-lg space-y-4 w-max[28vw, 400px] z-50 relative border-solid border-2 border-gray-200">
             <div className="flex justify-between items-center">
               <h2></h2>
               <img onClick={onClose} src="/Images/close.png" alt="close" className='mt-2 w-4 h-4 cursor-pointer rounded-full'/>
@@ -33,11 +75,13 @@ const Formpopup = ({onClose}) => {
                 Full Name
               </label>
               <input
-              // required
+              required
                 type="text"
                 id="fullName"
+                name='fullName'
                 placeholder="Your Full Name"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                onChange={handleChange}
               />
             </div>
 
@@ -67,10 +111,12 @@ const Formpopup = ({onClose}) => {
                 Email
               </label>
               <input
-              // required
+              required
                 type="email"
                 id="email"
+                name='email'
                 placeholder="Your Email Address"
+                onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
             </div>
@@ -94,10 +140,12 @@ const Formpopup = ({onClose}) => {
                   {/* Add more country codes as needed */}
                 </select>
                 <input
-                // required
+                required
                   type="tel"
                   id="contact"
+                  name='phone'
                   placeholder="Phone Number"
+                  onChange={handleChange}
                   className="flex-grow px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
               </div>
@@ -137,7 +185,6 @@ const Formpopup = ({onClose}) => {
 
             {/* Submit Button */}
             <button
-            // onClick={()=> setShowForm(false)}
               type="submit"
               className="w-full py-3 text-white bg-blue-500 rounded-lg shadow-lg hover:bg-blue-600 transition-transform transform hover:scale-105"
             >
