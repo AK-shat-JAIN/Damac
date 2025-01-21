@@ -13,7 +13,12 @@ import leadRoutes from './routes/leadRoutes.js';
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());    //this allows us to make requests from the frontend to the backend
+app.use(cors(                //this allows us to make requests from the frontend to the backend
+    {
+        origin: 'http://localhost:5173',
+        credentials: true
+    }
+));    
 // const multer  = require('multer');
 // const upload = multer();
 // app.use(upload.array());
