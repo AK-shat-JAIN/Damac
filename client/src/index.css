@@ -2,17 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+/* @font-face {
     font-family: "Awesome Serif";
     src: url("/src/assets/fonts/AwesomeSerif-Regular.woff2") format("woff2"),
+         url(../src/assets/fonts/)
          url("/src/assets/fonts/AwesomeSerif-Regular.woff") format("woff"),
          url("/src/assets/fonts/AwesomeSerif-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
-  }
+  } */
   
   @font-face {
-    font-family: "Awesome Serif";
+    font-family: "jj";
     src: url("/src/assets/fonts/AwesomeSerif-BoldRegular.woff2") format("woff2"),
          url("/src/assets/fonts/AwesomeSerif-BoldRegular.woff") format("woff"),
          url("/src/assets/fonts/AwesomeSerif-BoldRegular.ttf") format("truetype");
@@ -30,10 +31,11 @@
   }
   
   @font-face {
-    font-family: "Awesome Serif";
-    src: url("/src/assets/fonts/AwesomeSerif-Italic-VAR-VF.woff2") format("woff2"),
-         url("/src/assets/fonts/AwesomeSerif-Italic-VAR-VF.woff") format("woff"),
-         url("/src/assets/fonts/AwesomeSerif-Italic-VAR-VF.ttf") format("truetype");
+    font-family: "hlo";
+    src: url("../src/assets/fonts/AwesomeSerif-Italic-VAR-VF.woff2") format("woff2"),
+          url("../src/assets/fonts/Awesome\ Serif\ Italic\ VAR-VF.ttf") format("truetype"),
+         url("../src/assets/fonts/AwesomeSerif-Italic-VAR-VF.woff") format("woff"),
+         url("../src/assets/fonts/AwesomeSerif-Italic-VAR-VF.ttf") format("truetype");
     font-weight: 400;
     font-style: italic;
   }
