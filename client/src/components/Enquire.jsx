@@ -2,12 +2,12 @@ import React from 'react'
 
 const Enquire = ({formVis}) => {
   return (
-    <div className="bg-gray-100 py-10 px-5 md:px-20">
+    <div className="bg-gray-100 py-20 px-5 md:px-20">
       <div className="grid md:grid-cols-2 gap-8 items-center">
         
         <div className="relative">
         
-          <div className="relative flex ">
+          <div className="relative flex  animate-fade-in">
             
             <img
               src="/Images/house1.jpg" 
@@ -24,10 +24,10 @@ const Enquire = ({formVis}) => {
         </div>
 
         <div>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+          <h2 className="text-2xl md:text-3xl lg:text-6xl font-bold text-gray-900">
             Crafting Elegance in Every Home
           </h2>
-          <p className="mt-4 text-xs text-gray-700">
+          <p className="mt-4 text-xs md:text-lg text-gray-700">
             DAMAC Islands is a master-planned community by DAMAC Properties,
             inspired by some of the world’s most sought-after island
             destinations. The development features six clusters, each reflecting

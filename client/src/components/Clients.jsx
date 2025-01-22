@@ -15,11 +15,11 @@ const Clients = () => {
       </ul>
       
       <div className="grid grid-cols-6 grid-rows-6 gap-4">
-        <div className="col-span-2 row-span-6 "><img src="/Images/img1.jpg" alt=""className='rounded-md' /></div>
-        <div className="col-span-2 row-span-3 col-start-5 row-start-1 "><img src="/Images/img2.jpg" alt="" className='rounded-md' /></div>
-        <div className="col-span-2 row-span-3 col-start-3 row-start-1"><img src="/Images/img3.jpg" alt="" className='rounded-md' /></div>
-        <div className="col-span-2 row-span-3 col-start-3 row-start-4 "><img src="/Images/img4.jpg" alt="" className='rounded-md'/></div>
-        <div className="col-span-2 row-span-3 col-start-5 row-start-4 "><img src="/Images/img5.jpg" alt="" className='rounded-md' /> </div>
+        <div className="col-span-2 row-span-6 "><img src="/Images/img1.jpg" alt=""className='rounded-md transform translate-y-4 hover:scale-105 transition-transform duration-500' /></div>
+        <div className="col-span-2 row-span-3 col-start-5 row-start-1 "><img src="/Images/img2.jpg" alt="" className='rounded-md transform translate-y-4 hover:scale-105 transition-transform duration-500' /></div>
+        <div className="col-span-2 row-span-3 col-start-3 row-start-1"><img src="/Images/img3.jpg" alt="" className='rounded-md transform translate-y-4 hover:scale-105 transition-transform duration-500' /></div>
+        <div className="col-span-2 row-span-3 col-start-3 row-start-4 "><img src="/Images/img4.jpg" alt="" className='rounded-md transform translate-y-4 hover:scale-105 transition-transform duration-500'/></div>
+        <div className="col-span-2 row-span-3 col-start-5 row-start-4 "><img src="/Images/img5.jpg" alt="" className='rounded-md transform translate-y-4 hover:scale-105 transition-transform duration-500' /> </div>
       </div>
     
       
