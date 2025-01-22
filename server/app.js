@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors(                //this allows us to make requests from the frontend to the backend
     {
-        origin: 'http://localhost:5173',
+        origin: 'https://damac.onrender.com',
         credentials: true
     }
 ));    
