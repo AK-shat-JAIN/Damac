@@ -185,6 +185,7 @@ const Formpopup = ({onClose}) => {
 
             {/* Submit Button */}
             <button
+            onClick={onClose}
               type="submit"
               className="w-full py-3 text-white bg-blue-500 rounded-lg shadow-lg hover:bg-blue-600 transition-transform transform hover:scale-105"
             >
