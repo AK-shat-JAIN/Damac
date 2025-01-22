@@ -49,8 +49,8 @@ const Formpopup = ({onClose}) => {
   }
 
   return (
-    <div className="bg-black bg-opacity-60 scroll-none p-6 shadow-lg z-50  animate-fade-in fixed scroll-none  grid h-[100%] w-[100%] place-items-center">
-          <form onSubmit={FormSubmission} className="bg-white  p-10 rounded-lg space-y-4 w-max[28vw, 400px] z-50 relative border-solid border-2 border-gray-200">
+    <div className="bg-black bg-opacity-60 scroll-none sm:p-0 md:p-6 shadow-lg z-50  animate-fade-in fixed  grid h-[100%] w-[100%] place-items-center">
+          <form onSubmit={FormSubmission} className="bg-white p-5 md:p-10 rounded-lg space-y-4 w-[90vw] md:w-[40vw]  w-max[25vw, 400px] z-50 relative border-solid border-2 border-gray-200">
             <div className="flex justify-between items-center">
               <h2></h2>
               <img onClick={onClose} src="/Images/close.png" alt="close" className='mt-2 w-4 h-4 cursor-pointer rounded-full'/>
@@ -80,7 +80,7 @@ const Formpopup = ({onClose}) => {
                 id="fullName"
                 name='fullName'
                 placeholder="Your Full Name"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary"
                 onChange={handleChange}
               />
             </div>
@@ -117,7 +117,7 @@ const Formpopup = ({onClose}) => {
                 name='email'
                 placeholder="Your Email Address"
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary"
               />
             </div>
 
@@ -132,7 +132,7 @@ const Formpopup = ({onClose}) => {
               <div className="flex items-center gap-2">
                 <select 
                   id="countryCode"
-                  className="px-4 py-3 border read-only border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="px-4 py-3 border read-only border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary"
                 >
                   {/* <option value="+1">+1</option> */}
                   <option value="+91">+91</option>
@@ -146,7 +146,7 @@ const Formpopup = ({onClose}) => {
                   name='phone'
                   placeholder="Phone Number"
                   onChange={handleChange}
-                  className="flex-grow px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="flex-grow w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary"
                 />
               </div>
             </div>
@@ -173,7 +173,7 @@ const Formpopup = ({onClose}) => {
               // required
                 type="checkbox"
                 id="financingInfo"
-                className="h-4 w-4 text-blue-500 border-gray-300 rounded focus:ring-2 focus:ring-blue-400"
+                className="h-4 w-4 text-secondary border-gray-300 rounded focus:ring-2 focus:ring-secondary"
               />
               <label
                 htmlFor="financingInfo"
@@ -187,7 +187,7 @@ const Formpopup = ({onClose}) => {
             <button
             onClick={onClose}
               type="submit"
-              className="w-full py-3 text-white bg-blue-500 rounded-lg shadow-lg hover:bg-blue-600 transition-transform transform hover:scale-105"
+              className="w-full py-3 text-white bg-secondary rounded-lg shadow-lg hover:bg-secondary transition-transform transform hover:scale-105"
             >
               Submit
             </button>

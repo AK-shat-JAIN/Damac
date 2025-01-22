@@ -92,7 +92,7 @@ const Form = () => {
                 id="fullName"
                 name="fullName"
                 placeholder="Your Full Name"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary"
                 onChange={handleChange}
                 // value={formData.fullName}
               />
@@ -131,7 +131,7 @@ const Form = () => {
                 placeholder="Your Email Address"
                 onChange={handleChange}
                 // value={formData.email}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary"
               />
             </div>
 
@@ -146,7 +146,7 @@ const Form = () => {
               <div className="flex items-center gap-2">
                 <select 
                   id="countryCode"
-                  className="px-4 py-3 border read-only border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="px-4 py-3 border read-only border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary"
                 >
                   {/* <option value="+1">+1</option> */}
                   <option value="+91">+91</option>
@@ -161,7 +161,7 @@ const Form = () => {
                   placeholder="Phone Number"
                   onChange={handleChange}
                   // value={formData.phone}
-                  className="flex-grow px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="flex-grow px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary"
                 />
               </div>
             </div>
@@ -188,7 +188,7 @@ const Form = () => {
               required
                 type="checkbox"
                 id="financingInfo"
-                className="h-4 w-4 text-blue-500 border-gray-300 rounded focus:ring-2 focus:ring-blue-400"
+                className="h-4 w-4 text-secondary border-gray-300 rounded focus:ring-2 focus:ring-secondary"
               />
               <label
                 htmlFor="financingInfo"
@@ -201,7 +201,7 @@ const Form = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full py-3 text-white bg-blue-500 rounded-lg shadow-lg hover:bg-blue-600 transition-transform transform hover:scale-105"
+              className="w-full py-3 text-white bg-secondary rounded-lg shadow-lg hover:bg-secondary-600 transition-transform transform hover:scale-105"
             >
               Submit
             </button>
