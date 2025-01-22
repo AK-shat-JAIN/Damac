@@ -27,7 +27,7 @@ const Enquire = ({formVis}) => {
           <h2 className="text-2xl md:text-3xl lg:text-6xl font-bold font-awesomeSerifBoldTall text-gray-900">
             Crafting Elegance in Every Home
           </h2>
-          <p className="mt-4 text-xs md:text-lg text-gray-700">
+          <p className="mt-4 text-xs md:text-lg text-gray-700 text-justify">
             DAMAC Islands is a master-planned community by DAMAC Properties,
             inspired by some of the world’s most sought-after island
             destinations. The development features six clusters, each reflecting

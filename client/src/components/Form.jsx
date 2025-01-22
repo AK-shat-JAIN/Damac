@@ -53,10 +53,10 @@ const Form = () => {
       <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
         {/* Left Section (Content) */}
         <div className="md:w-1/2">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold font-awesomeSerifBoldTall text-gray-900 leading-tight">
             Dream Home <br /> a door away
           </h1>
-          <p className="mt-6 text-gray-700 text-lg">
+          <p className="mt-6 text-gray-700 text-lg text-justify">
             Ever since its establishment in 2002, DAMAC Properties has shaped
             Dubai’s dynamic real estate scene, becoming a prominent figure in
             the industry. With over 47,600 units delivered as of mid-2024, it
