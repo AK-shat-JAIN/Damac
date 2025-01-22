@@ -12,6 +12,7 @@ import DreamHome from './components/DreamHome'
 import DreamHome2 from './components/DreamHome2'
 import Footer from './components/Footer'
 import Formpopup from './components/Formpopup'
+import WhatsappButton from './components/WhatsappButton'
 import { useState } from 'react'
 function App() {
 
@@ -28,6 +29,8 @@ function App() {
    <main className='bg-white'>
    {showForm?<Formpopup onClose={toggleForm}></Formpopup>:<></>}
 
+
+      <WhatsappButton />
       <Hero formVis={toggleForm}></Hero>
       <About formVis={toggleForm}></About>
       <House></House>
