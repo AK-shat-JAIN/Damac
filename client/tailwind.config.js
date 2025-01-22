@@ -11,8 +11,8 @@ export default {
         secondary: '#088AA4'
       }, // colors.primary
       fontFamily: {
-        awesomeSerif: ['Awesome Serif'], // font-family: 'Awesome Serif', serif;
-        hlo: ['hlo']
+        awesomeSerif: ['Awesome Serif Normal'], // font-family: 'Awesome Serif', serif;
+        awesomeSerifBoldTall: ['Awesome Serif Bold Tall']
       },
       screens: {
         sm: "640px",  // Small screens like phones

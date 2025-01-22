@@ -14,10 +14,10 @@ const House = () => {
 
       {/* Text Content */}
       <div className="relative z-1 flex flex-col items-center h-[30vh] md:h-[60vh] lg:h-screen  p-4 md:px-10">
-        <h1 className="text-3xl md:text-6xl lg:text-8xl font-bold font-awesomeSerif text-gray-900 leading-tight text-center">
+        <h1 className="text-4xl md:text-7xl lg:text-9xl font-bold font-awesomeSerifBoldTall text-gray-900 leading-tight text-center">
           Crafting Elegance in
         </h1>
-        <h2 className="text-2xl md:text-4xl lg:text-6xl text-blue-500 font-semibold font-awesomeSerif text-right w-7/12">
+        <h2 className="text-2xl md:text-4xl lg:text-6xl text-blue-500 font-semibold font-awesomeSerif text-right w-8/12">
           Every Home
         </h2>
       </div>

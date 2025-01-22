@@ -4,8 +4,8 @@ const Clients = () => {
   return (
     <div className='bg-white p-4 flex flex-col items-center gap-4'>
       <div>
-        <h2 className='text-2xl md:text-4xl lg:text-6xl font-awesomeSerif text-center'>Exceptional Properties</h2>
-        <h2 className='text-2xl md:text-4xl lg:text-6xl font-awesomeSerif text-center'>Exceptional Clients</h2>
+        <h2 className='text-2xl md:text-4xl lg:text-6xl font-awesomeSerifBoldTall text-center'>Exceptional Properties</h2>
+        <h2 className='text-2xl md:text-4xl lg:text-6xl font-awesomeSerifBoldTall text-center'>Exceptional Clients</h2>
       </div>
       <ul className='text-sm w-4/4 text-left  list-disc'>
         <li>Balance of serenity and convenience</li>

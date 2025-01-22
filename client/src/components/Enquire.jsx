@@ -24,7 +24,7 @@ const Enquire = ({formVis}) => {
         </div>
 
         <div>
-          <h2 className="text-2xl md:text-3xl lg:text-6xl font-bold font-awesomeSerif text-gray-900">
+          <h2 className="text-2xl md:text-3xl lg:text-6xl font-bold font-awesomeSerifBoldTall text-gray-900">
             Crafting Elegance in Every Home
           </h2>
           <p className="mt-4 text-xs md:text-lg text-gray-700">

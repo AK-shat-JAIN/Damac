@@ -4,7 +4,7 @@ const Grid = () => {
   return (
     <div className='bg-white p-4 mt-10 flex flex-col items-center justify-center gap-4 '>
       <div>
-        <h2 className='text-2xl md:text-4xl lg:text-6xl text-center font-awesomeSerif font-bold'>The Comfort of a Great Location.</h2>
+        <h2 className='text-2xl md:text-4xl lg:text-6xl text-center font-awesomeSerifBoldTall font-bold'>The Comfort of a Great Location.</h2>
         
       </div>
       
