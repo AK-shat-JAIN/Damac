@@ -170,7 +170,7 @@ const Formpopup = ({onClose}) => {
             {/* Checkbox */}
             <div className="flex items-center">
               <input
-              // required
+              required
                 type="checkbox"
                 id="financingInfo"
                 className="h-4 w-4 text-secondary border-gray-300 rounded focus:ring-2 focus:ring-secondary"
@@ -185,7 +185,7 @@ const Formpopup = ({onClose}) => {
 
             {/* Submit Button */}
             <button
-            onClick={onClose}
+            // onClick={onClose}
               type="submit"
               className="w-full py-3 text-white bg-secondary rounded-lg shadow-lg hover:bg-secondary transition-transform transform hover:scale-105"
             >
